@@ -1,0 +1,66 @@
+{
+  "events": [
+    {
+      "title": "Natale a Gonars",
+      "slug": "natale-a-gonars",
+      "date": "2025-12-07",
+      "location": "Piazza Municipio, Gonars",
+      "mapUrl": "https://www.google.com/maps?q=45.9000,13.2500",
+      "theme": "NATALE",
+      "description": "Sta per tornare la magia del Natale!🎅 Addobbi, luci, eventi, musica e tanto intrattenimento per grandi e piccini! Dal 7 al 21 dicembre nel tendone riscaldato in piazza Municipio!",
+      "cover": "assets/img/events/natale-a-gonars/accensione.png",
+      "images": [
+        "assets/img/events/natale-a-gonars/accensione.png",
+        "assets/img/events/natale-a-gonars/accensione1.png",
+        "assets/img/events/natale-a-gonars/accensione2.png",
+        "assets/img/events/natale-a-gonars/accensione3.png",
+        "assets/img/events/natale-a-gonars/accensione4.png",
+        "assets/img/events/natale-a-gonars/accensione5.png"
+      ],
+      "poster": "assets/img/natale25.pdf"
+    },  
+    {
+      "title": "Festa d’Autunno",
+      "slug": "festa-d-autunno",
+      "date": "2025-10-12",
+      "location": "Centro di Gonars",
+      "mapUrl": "https://www.google.com/maps?q=45.9000,13.2500",
+      "description": "La Festa d’Autunno a Gonars è in arrivo: domenica 12 ottobre.\n🎉 Street-food, mercati, eventi per grandi e piccini… una giornata da vivere insieme!",
+      "cover": "assets/img/events/festa-autunno-25/autunno25.jpg",
+      "images": [
+        "assets/img/events/festa-autunno-25/autunno25.jpg"
+      ],
+      "tags": ["autunno", "street-food", "mercati"],
+      "theme": "AUTUNNO"
+    }
+    ,
+    {
+      "title": "Giro d'Italia a Gonars",
+      "slug": "giro-ditalia-a-gonars",
+      "date": "2025-05-24",
+      "location": "Gonars",
+      "mapUrl": "https://www.google.com/maps?q=45.9000,13.2500",
+      "description": "Il nostro paese sarà protagonista della 14ª tappa: Treviso → Nova Gorica/Gorizia.\nSeguici sui social, pubblicheremo ogni giorno contenuti speciali per accompagnarvi fino al passaggio dei ciclisti!",
+      "cover": "assets/img/events/giro-italia-25/giro.jpg",
+      "images": [
+        "assets/img/events/giro-italia-25/giro.jpg"
+      ],
+      "tags": ["sport", "ciclismo"]
+    }
+    ,
+    {
+      "title": "Festa di Primavera",
+      "slug": "festa-di-primavera-25",
+      "date": "2025-04-06",
+      "location": "Centro di Gonars",
+      "mapUrl": "https://www.google.com/maps?q=45.9000,13.2500",
+      "description": "🌸🎉 FESTA DI PRIMAVERA A GONARS! 🎉🌸\nUna giornata all’insegna del divertimento con musica dal vivo, street food, giochi e intrattenimenti per tutte le età! 🎶🍔🎨\nNon perdere l’occasione di vivere la magia della primavera con noi. Ti aspettiamo! 🌷✨",
+      "cover": "assets/img/events/festa-primavera-25/primavera.png",
+      "images": [
+        "assets/img/events/festa-primavera-25/primavera.png"
+      ],
+      "tags": ["primavera", "musica", "street-food"],
+      "theme": "PRIMAVERA"
+    }
+  ]
+}

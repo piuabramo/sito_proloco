@@ -1,0 +1,10 @@
+[
+  { "name": "Credifriuli", "logo": "assets/img/sponsor/credifriuli.png", "url": "https://example.com/banca" },
+  { "name": "Zanutta", "logo": "assets/img/sponsor/zanutta.png", "url": "https://example.com/caseificio" },
+  { "name": "Tiemme", "logo": "assets/img/sponsor/tiemme.png", "url": "https://example.com/cantina" },
+  { "name": "Oro Caffè", "logo": "assets/img/sponsor/oro_caffe.png", "url": "https://example.com/panificio" },
+  { "name": "Michel Pub", "logo": "assets/img/sponsor/michel_pub.png", "url": "https://example.com/tipografia" },
+  { "name": "MC Impianti", "logo": "assets/img/sponsor/mc_impianti.png", "url": "https://example.com/tipografia" },
+  { "name": "Friuli Antincendi", "logo": "assets/img/sponsor/friuli_antincendi.png", "url": "https://example.com/tipografia" },
+  { "name": "Electrix", "logo": "assets/img/sponsor/electrix.png", "url": "https://example.com/tipografia" }
+]
