@@ -137,7 +137,7 @@
       "description": evt.description,
       "organizer": {
         "@type": "Organization",
-        "name": "Pro Loco Gonars",
+        "name": "Proloco Gonars",
         "url": "https://www.prolocogonars.it/"
       }
     };
