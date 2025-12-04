@@ -66,9 +66,11 @@
     all.sort((a,b)=> new Date(a.date) - new Date(b.date));
     // pick next upcoming
     const upcoming = all.find(e => new Date(e.date) >= now) || all[all.length-1];
-    const others = all.filter(e => e !== upcoming);
+    // Others: sort by date descending (most recent first)
+    const others = all.filter(e => e !== upcoming).sort((a,b)=> new Date(b.date) - new Date(a.date));
     renderNextEvent(upcoming);
-    initThemeAnimation(upcoming?.theme);
+    // Force NATALE animation on all pages
+    initThemeAnimation('NATALE');
     initEventsSlider(others);
     renderSponsors(sponsors);
   }).catch(err => {
@@ -191,6 +193,15 @@
     const prevBtn = qs('.slider-btn.prev');
     if (nextBtn) nextBtn.addEventListener('click', ()=>{ idx++; update(); });
     if (prevBtn) prevBtn.addEventListener('click', ()=>{ idx--; update(); });
+    // Swipe support for mobile
+    let startX = 0; let dragging = false;
+    track.addEventListener('touchstart', (e)=>{ dragging=true; startX = e.touches[0].clientX; }, {passive:true});
+    track.addEventListener('touchend', (e)=>{
+      if(!dragging) return; dragging=false; const endX = e.changedTouches[0].clientX;
+      if (endX - startX > 40) { idx--; }
+      else if (startX - endX > 40) { idx++; }
+      update();
+    }, {passive:true});
     window.addEventListener('resize', update);
     update();
   }

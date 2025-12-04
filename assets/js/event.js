@@ -12,7 +12,8 @@
     const evt = findEvent(list, id);
     if (!evt){ const t = qs('#evt-title'); if (t) t.textContent = 'Evento non trovato'; return; }
     renderEvent(evt);
-    initThemeAnimation(evt.theme);
+    // Force NATALE animation on all pages
+    initThemeAnimation('NATALE');
   }).catch(console.error);
 
   function slug(evt){ return (evt.slug || evt.title.toLowerCase().replace(/\s+/g,'-').replace(/[^a-z0-9-]/g,'')); }
@@ -84,6 +85,15 @@
     const countdownHost = document.getElementById('evt-countdown');
     const now = new Date();
     const start = new Date(evt.date);
+    // If a time like "HH:MM" is provided, include it in the countdown target
+    if (evt.time && typeof evt.time === 'string'){
+      const m = evt.time.trim().match(/^([01]?\d|2[0-3]):([0-5]\d)$/);
+      if (m){
+        const h = parseInt(m[1],10);
+        const min = parseInt(m[2],10);
+        start.setHours(h, min, 0, 0);
+      }
+    }
     if (start.getTime() > now.getTime()) {
       if (countdownHost){
         countdownHost.innerHTML = countdownHTML(start);
@@ -98,7 +108,9 @@
     const whenWhere = document.createElement('div');
     whenWhere.className = 'when-where';
       const when = document.createElement('div');
-      when.innerHTML = `<div class="label">📅 QUANDO</div><div class="value">${formatDateTime(start)}</div>`;
+        const timeStr = (evt.time && String(evt.time).trim()) ? String(evt.time).trim() : '';
+        const whenText = timeStr ? `${formatDate(start)} ore ${timeStr}` : `${formatDate(start)}`;
+        when.innerHTML = `<div class="label">📅 QUANDO</div><div class="value">${whenText}</div>`;
     const where = document.createElement('div');
     const mapLink = evt.mapUrl ? `<a href="${evt.mapUrl}" target="_blank" rel="noopener">Apri su Google Maps</a>` : '';
       where.innerHTML = `<div class="label">📍 DOVE</div><div class="value">${evt.location} ${mapLink ? '• ' + mapLink : ''}</div>`;
@@ -160,13 +172,11 @@
       </div>
     `;
   }
-  function formatDateTime(d){
+  function formatDate(d){
     const dd = String(d.getDate()).padStart(2,'0');
     const mm = String(d.getMonth()+1).padStart(2,'0');
     const yyyy = d.getFullYear();
-    const hh = String(d.getHours()).padStart(2,'0');
-    const min = String(d.getMinutes()).padStart(2,'0');
-    return `${dd}-${mm}-${yyyy} ore ${hh}-${min}`;
+    return `${dd}-${mm}-${yyyy}`;
   }
   function formatDesc(text){
     // Simple paragraph splitter to allow longer descriptive text

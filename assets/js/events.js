@@ -3,6 +3,53 @@
   const qs = sel => document.querySelector(sel);
   const ce = (tag, cls) => { const el = document.createElement(tag); if (cls) el.className = cls; return el; };
   const fmtDate = d => new Date(d).toLocaleDateString('it-IT', { year: 'numeric', month: 'long', day: 'numeric' });
+  // Simple theme animation (same as in main.js)
+  function initThemeAnimation(theme){
+    const existing = document.querySelector('.theme-anim');
+    if (existing) existing.remove();
+    if (!theme || theme === 'ISTITUZIONALE') return;
+    const host = ce('div','theme-anim');
+    document.body.appendChild(host);
+    const W = window.innerWidth; const H = window.innerHeight;
+    const rng = (min,max)=> Math.random()*(max-min)+min;
+    if (theme === 'NATALE'){
+      for(let i=0;i<60;i++){
+        const s = ce('div','flake');
+        s.style.left = `${rng(0,W)}px`;
+        s.style.top = `-${rng(0, H*0.2)}px`;
+        s.style.width = s.style.height = `${rng(2,5)}px`;
+        s.style.background = 'rgba(255,255,255,0.9)';
+        s.style.borderRadius = '50%';
+        s.style.animation = `fall-snow ${rng(6,12)}s linear ${rng(0,6)}s infinite`;
+        host.appendChild(s);
+      }
+    } else if (theme === 'AUTUNNO'){
+      const colors = ['#f5a623','#f29f05','#d67700'];
+      for(let i=0;i<40;i++){
+        const l = ce('div','leaf');
+        l.style.left = `${rng(0,W)}px`;
+        l.style.top = `-${rng(0, H*0.2)}px`;
+        l.style.width = `${rng(8,14)}px`;
+        l.style.height = `${rng(12,18)}px`;
+        l.style.background = colors[Math.floor(rng(0,colors.length))];
+        l.style.borderRadius = '60% 60% 40% 40%';
+        l.style.opacity = '0.9';
+        l.style.animation = `fall-leaf ${rng(8,14)}s linear ${rng(0,6)}s infinite`;
+        host.appendChild(l);
+      }
+    } else if (theme === 'PRIMAVERA'){
+      for(let i=0;i<10;i++){
+        const b = ce('div','bird');
+        b.textContent = '🕊️';
+        b.style.fontSize = `${rng(16,22)}px`;
+        b.style.top = `${rng(H*0.2, H*0.6)}px`;
+        b.style.left = `-${rng(20, 100)}px`;
+        b.style.animation = `fly-bird ${rng(10,18)}s linear ${rng(0,4)}s infinite`;
+        host.appendChild(b);
+      }
+    }
+    window.addEventListener('resize', ()=> initThemeAnimation(theme), { once: true });
+  }
 
   const yearEl = qs('#year'); if (yearEl) yearEl.textContent = new Date().getFullYear();
 
@@ -12,6 +59,8 @@
     const all = Array.isArray(data.events) ? data.events.slice() : [];
     initFilters(all);
     renderList(all);
+    // Force NATALE animation on all pages
+    initThemeAnimation('NATALE');
   }).catch(err => console.error(err));
 
   function initFilters(list){
