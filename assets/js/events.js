@@ -94,7 +94,7 @@
       const body = ce('div', 'body');
       const h4 = ce('h4'); h4.textContent = evt.title;
       const meta = ce('div', 'meta'); meta.textContent = `${fmtDate(evt.date)} • ${evt.location}`;
-      const p = ce('p'); p.textContent = evt.description;
+      const p = ce('p'); p.innerHTML = String(evt.description || '').replace(/\n/g, '<br>');
       body.append(h4, meta, p);
       link.append(thumb, body);
       item.append(link);

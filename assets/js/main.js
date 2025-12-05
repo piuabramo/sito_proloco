@@ -62,16 +62,20 @@
   ]).then(([data, sponsors]) => {
     const all = Array.isArray(data.events) ? data.events.slice() : [];
     const now = new Date();
-    // sort ascending by date
+    // sort ascending by date to find upcoming
     all.sort((a,b)=> new Date(a.date) - new Date(b.date));
     // pick next upcoming
     const upcoming = all.find(e => new Date(e.date) >= now) || all[all.length-1];
-    // Others: sort by date descending (most recent first)
-    const others = all.filter(e => e !== upcoming).sort((a,b)=> new Date(b.date) - new Date(a.date));
+    // Build 'Altri eventi': future in ascending (include anche il prossimo), poi past in descending
+    const futureAsc = all.filter(e => new Date(e.date) >= now)
+               .sort((a,b)=> new Date(a.date) - new Date(b.date));
+    const pastDesc = all.filter(e => new Date(e.date) < now)
+              .sort((a,b)=> new Date(b.date) - new Date(a.date));
+    const othersOrdered = futureAsc.concat(pastDesc);
     renderNextEvent(upcoming);
     // Force NATALE animation on all pages
     initThemeAnimation('NATALE');
-    initEventsSlider(others);
+    initEventsSlider(othersOrdered);
     renderSponsors(sponsors);
   }).catch(err => {
     console.error('Errore nel caricamento dei dati', err);
@@ -87,7 +91,14 @@
     const content = ce('div', 'content');
     const h3 = ce('h3'); h3.textContent = evt.title;
     const meta = ce('div', 'meta'); meta.textContent = `${fmtDate(evt.date)} • ${evt.location}`;
-    const p = ce('p'); p.textContent = evt.description;
+    // Description: support \n line breaks and limit based on viewport
+      const p = ce('p');
+    const desc = String(evt.description || '');
+    const limit = (window.innerWidth <= 600) ? 200 : 600;
+    const isLong = desc.length > limit;
+    const short = isLong ? desc.slice(0,limit) + '…' : desc;
+      const html = short.replace(/\n/g, '<br>');
+      p.innerHTML = html + (isLong ? ` <a href="event.html?id=${encodeURIComponent(slug(evt))}">Leggi tutto</a>` : '');
     const actions = ce('div', 'actions');
     const more = ce('a', 'btn btn-outline'); more.href = `event.html?id=${encodeURIComponent(slug(evt))}`; more.textContent = 'Vedi dettagli';
     actions.appendChild(more);

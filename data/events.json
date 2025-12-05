@@ -1,14 +1,12 @@
 {
   "events": [
     {
-      "title": "Natale a Gonars",
-      "slug": "natale-a-gonars",
+      "title": "Accendiamo il Natale",
+      "slug": "accendiamo-il-natale",
       "date": "2025-12-07",
       "time": "18:00",
       "location": "Piazza Municipio, Gonars",
-      "mapUrl": "https://www.google.com/maps?q=45.896388159122324,13.235581729852239",
-      "theme": "NATALE",
-      "description": "Sta per tornare la magia del Natale!🎅 Addobbi, luci, eventi, musica e tanto intrattenimento per grandi e piccini! Dal 7 al 21 dicembre nel tendone riscaldato in piazza Municipio!",
+      "description": "🎄✨ ACCENSIONE DELL’ALBERO DI NATALE ✨🎄\n Nadâl a Gonars si accende con il primo di tanti eventi che riempiranno di magia, musica e calore la nostra piazza per tutto il periodo natalizio! 🌟\n📅 Domenica 7 dicembre 2025\n📍 Piazza Municipio Gonars (nel tendone riscaldato!)\n🎉 Ore 18:00 — Inizio dei festeggiamenti\n🎅 Ore 19:00 — Accensione dell’albero e arrivo di Babbo Natale con caramelle e regali per tutti i bambini 🎁\n🕒 A seguire — Tanta musica e divertimento con i Pet&Sons! 🎶🔥\n🍔 Per una cena in compagnia, in famiglia o tra amici, sarà attivo un fornitissimo chiosco con pulled pork, pljeskavica e un menù bimbi ad un prezzo speciale!\n☕ E per riscaldarvi… cioccolata calda e vin brulè a volontà!\nUn evento organizzato in collaborazione con le associazioni:\nFur Timp, Gruppo Alpini Gonars, Grup Miez Mil e Amis dal Disu 🤝\n❤️ Non mancate: insieme accendiamo la magia del Natale… e il cuore della comunità Gonarese!",
       "cover": "assets/img/events/natale-a-gonars/accensione.png",
       "images": [
         "assets/img/events/natale-a-gonars/accensione.png",
@@ -18,8 +16,135 @@
         "assets/img/events/natale-a-gonars/accensione4.png",
         "assets/img/events/natale-a-gonars/accensione5.png"
       ],
-      "poster": "assets/img/natale25.pdf"
-    },  
+      "tags": [
+        "natale",
+        "bambini",
+        "musica"
+      ],
+      "theme": "NATALE"
+    },
+    {
+      "title": "Torneo di Burraco",
+      "slug": "torneo-di-burraco",
+      "date": "2025-12-08",
+      "time": "18:00",
+      "location": "Gonars, piazza Municipio",
+      "description": "Torneo di Burraco in collaborazione con AMIS DAL DISU. Dalle 18.00 inizio delle partite.",
+      "cover": "assets/img/events/natale-a-gonars/burraco.png",
+      "images": [
+        "assets/img/events/natale-a-gonars/burraco.png"
+      ],
+      "tags": [
+        "torneo",
+        "giochi",
+        "burraco"
+      ],
+      "theme": "NATALE"
+    },
+    {
+      "title": "Spettacolo teatrale – Cercasi Disperatamente Anima Gemella",
+      "slug": "cercasi-disperatamente-anima-gemella",
+      "date": "2025-12-12",
+      "time": "21:00",
+      "location": "Gonars, piazza Municipio",
+      "description": "Spettacolo teatrale 'Cercasi disperatamente anima gemella' con LE ANDRONE APS Officina Teatrale Gonars. Dalle 21.00 inizio dello spettacolo.",
+      "cover": "assets/img/events/natale-a-gonars/teatro1.png",
+      "images": [
+        "assets/img/events/natale-a-gonars/teatro1.png"
+      ],
+      "tags": [
+        "teatro"
+      ],
+      "theme": "NATALE"
+    },
+    {
+      "title": "Gonars per Vanessa",
+      "slug": "gonars-per-vanessa",
+      "date": "2025-12-14",
+      "time": "12:00",
+      "location": "Gonars, piazza Municipio",
+      "description": "Pranzo solidale con gli chef Sandro 'Balena', Benedetto e Massimo, insieme al maestro dei vini Oscar. A seguire DJ set. Prezzo: 50€ a persona. Prenotazione obbligatoria entro il 30 novembre presso Pasticceria Giuly.",
+      "cover": "assets/img/events/natale-a-gonars/pranzo1.png",
+      "images": [
+        "assets/img/events/natale-a-gonars/pranzo1.png",
+        "assets/img/events/natale-a-gonars/pranzo2.png"
+      ],
+      "tags": [
+        "solidarietà",
+        "pranzo"
+      ],
+      "theme": "NATALE"
+    },
+    {
+      "title": "Guida Insolita al Friuli",
+      "slug": "guida-insolita-al-friuli",
+      "date": "2025-12-15",
+      "time": "20:30",
+      "location": "Gonars, piazza Municipio",
+      "description": "Angelo Floramo presenta 'Guida insolita al Friuli'. A seguire momento conviviale.",
+      "cover": "assets/img/events/natale-a-gonars/post_generico.png",
+      "images": [
+        "assets/img/events/natale-a-gonars/post_generico.png"
+      ],
+      "tags": [
+        "cultura",
+        "presentazione"
+      ],
+      "theme": "NATALE"
+    },
+    {
+      "title": "Trigeminus",
+      "slug": "trigeminus",
+      "date": "2025-12-19",
+      "time": "20:30",
+      "location": "Gonars, piazza Municipio",
+      "description": "Serata comica con il duo TRIGEMINUS in collaborazione con Pro Loco Gonars.",
+      "cover": "assets/img/events/natale-a-gonars/trigeminus.png",
+      "images": [
+        "assets/img/events/natale-a-gonars/trigeminus.png"
+      ],
+      "tags": [
+        "comicità",
+        "spettacolo"
+      ],
+      "theme": "NATALE"
+    },
+    {
+      "title": "Damnatus Nomine",
+      "slug": "damnatus-nomine",
+      "date": "2025-12-20",
+      "time": "17:00",
+      "location": "Gonars, piazza Municipio",
+      "description": "I Damnatūs Nominē emergono dal buio con un rituale pieno di potenza, mistero e fascino oscuro. A seguire DJ set. Fortissimi chioschi attivi per tutta la serata.",
+      "cover": "assets/img/events/natale-a-gonars/damnatus1.png",
+      "images": [
+        "assets/img/events/natale-a-gonars/damnatus1.png",
+        "assets/img/events/natale-a-gonars/damnatus2.png",
+        "assets/img/events/natale-a-gonars/damnatus3.png"
+      ],
+      "tags": [
+        "musica",
+        "spettacolo"
+      ],
+      "theme": "NATALE"
+    },
+    {
+      "title": "Concerto Gospel",
+      "slug": "concerto-gospel",
+      "date": "2025-12-21",
+      "time": "18:00",
+      "location": "Gonars, piazza Municipio",
+      "description": "Concerto del coro Harmony Gospel Singers in collaborazione con Pro Loco Gonars.",
+      "cover": "assets/img/events/natale-a-gonars/gospel.png",
+      "images": [
+        "assets/img/events/natale-a-gonars/gospel.png"
+      ],
+      "tags": [
+        "musica",
+        "gospel"
+      ],
+      "theme": "NATALE"
+    },
     {
       "title": "Festa d’Autunno",
       "slug": "festa-d-autunno",
@@ -32,25 +157,30 @@
       "images": [
         "assets/img/events/festa-autunno-25/autunno25.jpg"
       ],
-      "tags": ["autunno", "street-food", "mercati"],
+      "tags": [
+        "autunno",
+        "street-food",
+        "mercati"
+      ],
       "theme": "AUTUNNO"
-    }
-    ,
+    },
     {
       "title": "Giro d'Italia a Gonars",
       "slug": "giro-ditalia-a-gonars",
       "date": "2025-05-24",
       "time": "",
-      "location": "Gonars",
+      "location": "Gonars, piazza Municipio",
       "mapUrl": "https://www.google.com/maps?q=45.896388159122324,13.235581729852239",
       "description": "Il nostro paese sarà protagonista della 14ª tappa: Treviso → Nova Gorica/Gorizia.\nSeguici sui social, pubblicheremo ogni giorno contenuti speciali per accompagnarvi fino al passaggio dei ciclisti!",
       "cover": "assets/img/events/giro-italia-25/giro.jpg",
       "images": [
         "assets/img/events/giro-italia-25/giro.jpg"
       ],
-      "tags": ["sport", "ciclismo"]
-    }
-    ,
+      "tags": [
+        "sport",
+        "ciclismo"
+      ]
+    },
     {
       "title": "Festa di Primavera",
       "slug": "festa-di-primavera-25",
@@ -63,7 +193,11 @@
       "images": [
         "assets/img/events/festa-primavera-25/primavera.png"
       ],
-      "tags": ["primavera", "musica", "street-food"],
+      "tags": [
+        "primavera",
+        "musica",
+        "street-food"
+      ],
       "theme": "PRIMAVERA"
     }
   ]

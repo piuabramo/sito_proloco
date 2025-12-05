@@ -179,8 +179,10 @@
     return `${dd}-${mm}-${yyyy}`;
   }
   function formatDesc(text){
-    // Simple paragraph splitter to allow longer descriptive text
-    return String(text).split(/\n\n+/).map(p => `<p>${p}</p>`).join('');
+    // Support both double newlines (new paragraph) and single newline (line break)
+    const raw = String(text);
+    const paragraphs = raw.split(/\n\n+/).map(p => p.replace(/\n/g, '<br>'));
+    return paragraphs.map(p => `<p>${p}</p>`).join('');
   }
 
   // Theme animations (same as in main.js)
